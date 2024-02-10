@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template_string, request
 import os
  
@@ -50,6 +49,25 @@ def home(file_name='file1.txt'):
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>File Content</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    padding: 20px;
+                }
+                h1 {
+                    color: #333;
+                }
+                h2 {
+                    color: #666;
+                }
+                pre {
+                    background-color: #ed766d;
+                    padding: 10px;
+                    border-radius: 5px;
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                }
+            </style>
         </head>
         <body>
             <h1>File Content</h1>
@@ -67,6 +85,18 @@ def render_error_page(error_message):
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Error</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    padding: 20px;
+                }
+                h1 {
+                    color: #900;
+                }
+                p {
+                    color: #900;
+                }
+            </style>
         </head>
         <body>
             <h1>Error</h1>
@@ -81,3 +111,6 @@ def internal_server_error(e):
  
 if __name__ == '__main__':
     app.run(debug=True)
+ 
+ 
+ 
